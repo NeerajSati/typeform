@@ -1,8 +1,13 @@
+import Pagecover from "./components/Pagecover";
+
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Typeform
-    </h1>
+    <div className="w-screen h-full min-h-screen bg-black">
+      <div className="w-full bg-[#0077ff4b] h-[4px] flex flex-row">
+        <div className="w-[25%] bg-[#0077ff] h-[4px] flex flex-row" />
+      </div>
+      <Pagecover/>
+    </div>
   );
 }
 

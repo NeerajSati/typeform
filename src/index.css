@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Gilroy700';
+    src: url(./assets/fonts/Gilroy-ExtraBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Gilroy600';
+    src: url(./assets/fonts/Gilroy-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Gilroy500';
+    src: url(./assets/fonts/Gilroy-SemiBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Gilroy400';
+    src: url(./assets/fonts/Gilroy-Regular.ttf) format('truetype');
+}
+  
