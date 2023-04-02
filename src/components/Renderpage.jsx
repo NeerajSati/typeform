@@ -70,7 +70,7 @@ function Renderpage({idx, setFormIndex, values}){
                   name="singleLanguage"
                   options={industriesOptions}
                   component={SelectTag}
-                  placeholder="Select a language..."
+                  placeholder="Type or select an option"
                   isMulti={false}
                 />
                 <div className='flex items-center'>

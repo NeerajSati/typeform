@@ -23,7 +23,8 @@ export const SelectTag = ({
         placeholder: (defaultStyles) => {
             return {
                 ...defaultStyles,
-                color: '#ffffff'
+                color: 'rgba(255, 255, 255, 0.3)',
+                fontFamily: 'Gilroy600'
             }
         },
         
@@ -34,6 +35,7 @@ export const SelectTag = ({
             color: 'white',
             border: 'none',
             boxShadow: isFocused ? 'rgba(255, 255, 255) 0px 2px' : 'rgba(255, 255, 255, 0.3) 0px 1px',
+            fontFamily: 'Gilroy600',
             "&:hover": {
                 boxShadow: 'rgba(255, 255, 255) 0px 2px',
                 cursor: 'text'
@@ -51,6 +53,7 @@ export const SelectTag = ({
             fontSize: '20px',
             padding: '5px',
             paddingLeft: '10px',
+            fontFamily: 'Gilroy600',
             "&:hover": {
                 backgroundColor: "rgb(76 76 76)",
                 cursor: 'pointer'
