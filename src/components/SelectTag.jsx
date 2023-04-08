@@ -1,5 +1,5 @@
 import { FieldProps } from "formik";
-import React from "react";
+import React, { useEffect } from "react";
 import Select from "react-select";
 
 export const SelectTag = ({
@@ -8,17 +8,31 @@ export const SelectTag = ({
   field,
   form,
   options,
-  isMulti = false
+  isMulti = false,
+  isSearchable = true,
+  defaultValue,
+  width,
+  cursorType
 }) => {
-
     const colourStyles = {
         menu: (provided, state) => ({
             ...provided,
             backgroundColor: 'black',
             outline: 'none',
             paddingLeft: '0px',
-            border: 'none'
+            border: 'none',
+            ...(width ? {width: width}: {})
           }),
+          dropdownIndicator: (provided, state) => {
+            return {
+              ...provided,
+              padding: '0px',
+              paddingLeft: '0px',
+              paddingTop: '0px',
+              paddingRight: '0px',
+              paddingDown: '0px',
+            };
+          },
 
         placeholder: (defaultStyles) => {
             return {
@@ -38,7 +52,7 @@ export const SelectTag = ({
             fontFamily: 'Gilroy600',
             "&:hover": {
                 boxShadow: 'rgba(255, 255, 255) 0px 2px',
-                cursor: 'text'
+                cursor: cursorType
             }
         }),
         option: (styles, { data, isDisabled, isFocused, isSelected }) => {
@@ -89,6 +103,8 @@ export const SelectTag = ({
       placeholder={placeholder}
       options={options}
       isMulti={isMulti}
+      isSearchable={isSearchable}
+      defaultValue={defaultValue}
       styles={colourStyles}
       components={{
         IndicatorSeparator: () => null
